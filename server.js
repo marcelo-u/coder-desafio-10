@@ -44,9 +44,6 @@ router.get("/productos", (req, res) => {
     "productos",
     prods.length > 0 ? { productos: prods } : NO_PRODUCTS_FOUND
   );
-  //prods.length > 0
-  //  ? res.render("productos", { productos: [] })
-  //  : res.status(404).render("not-found", NO_PRODUCTS_FOUND);
 });
 
 router.get("/productos/:id", isProductPresentMiddleware, (req, res) => {
